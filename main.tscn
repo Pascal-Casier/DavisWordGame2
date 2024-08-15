@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4ktlkyyewmmt"]
 
 [ext_resource type="Theme" uid="uid://b3toc55tbm47y" path="res://GameTheme.tres" id="1_vc5ag"]
-[ext_resource type="Script" path="res://main.gd" id="2_a5msp"]
+[ext_resource type="Script" path="res://main_with_comments.gd" id="2_6n5ql"]
 [ext_resource type="Texture2D" uid="uid://vwmtbbuifysb" path="res://icons/play.png" id="2_ub83k"]
 
 [node name="Main" type="Control"]
@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_vc5ag")
-script = ExtResource("2_a5msp")
+script = ExtResource("2_6n5ql")
 
 [node name="Bgd1" type="ColorRect" parent="."]
 layout_mode = 1
@@ -46,7 +46,8 @@ horizontal_alignment = 1
 [node name="GridContainer" type="GridContainer" parent="Bgd1/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-columns = 5
+theme_override_constants/h_separation = 15
+columns = 4
 
 [node name="Category1" type="Button" parent="Bgd1/MarginContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
