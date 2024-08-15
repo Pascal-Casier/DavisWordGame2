@@ -1,0 +1,226 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4ktlkyyewmmt"]
+
+[ext_resource type="Theme" uid="uid://b3toc55tbm47y" path="res://GameTheme.tres" id="1_vc5ag"]
+[ext_resource type="Script" path="res://main.gd" id="2_a5msp"]
+[ext_resource type="Texture2D" uid="uid://vwmtbbuifysb" path="res://icons/play.png" id="2_ub83k"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vc5ag")
+script = ExtResource("2_a5msp")
+
+[node name="Bgd1" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0470588, 0, 0.305882, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Bgd1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Bgd1/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 100
+
+[node name="Title" type="Label" parent="Bgd1/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+text = "Choisis une catégorie"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Bgd1/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 5
+
+[node name="Category1" type="Button" parent="Bgd1/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "École"
+
+[node name="Category2" type="Button" parent="Bgd1/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Corps"
+
+[node name="Category3" type="Button" parent="Bgd1/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Animaux"
+
+[node name="Category4" type="Button" parent="Bgd1/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Fruits"
+
+[node name="Category5" type="Button" parent="Bgd1/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Couleurs"
+
+[node name="OptionButton" type="OptionButton" parent="Bgd1/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+alignment = 1
+icon_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Bgd1/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_ub83k")
+
+[node name="Game" type="ColorRect" parent="Bgd1/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+color = Color(0.0313726, 0.0431373, 0.368627, 1)
+
+[node name="Options" type="GridContainer" parent="Bgd1/MarginContainer/Game"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 30
+columns = 5
+
+[node name="EndGame" type="ColorRect" parent="Bgd1/MarginContainer/Game"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.780392, 0.121569, 0.121569, 1)
+
+[node name="endLbl" type="Label" parent="Bgd1/MarginContainer/Game/EndGame"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "gg"
+
+[node name="Score" type="Label" parent="Bgd1/MarginContainer/Game/EndGame"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 203.0
+offset_top = 387.0
+offset_right = 949.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 25
+text = "score"
+horizontal_alignment = 1
+
+[node name="restartContainer" type="HBoxContainer" parent="Bgd1/MarginContainer/Game/EndGame"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -77.0
+offset_right = 20.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 35
+
+[node name="btnRecommencer" type="Button" parent="Bgd1/MarginContainer/Game/EndGame/restartContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 41
+text = "Recommencer"
+icon_alignment = 1
+
+[node name="btnHome" type="Button" parent="Bgd1/MarginContainer/Game/EndGame/restartContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 41
+text = "Home"
+
+[node name="Training" type="Control" parent="Bgd1/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("1_vc5ag")
+
+[node name="ColorRect" type="ColorRect" parent="Bgd1/MarginContainer/Training"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.741176, 0.662745, 0.662745, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Bgd1/MarginContainer/Training/ColorRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="title" type="Label" parent="Bgd1/MarginContainer/Training/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "Entraînement"
+horizontal_alignment = 1
+
+[node name="ButtonsContainer" type="GridContainer" parent="Bgd1/MarginContainer/Training/ColorRect/VBoxContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="item_selected" from="Bgd1/MarginContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Bgd1/MarginContainer/Game/EndGame/restartContainer/btnRecommencer" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Bgd1/MarginContainer/Game/EndGame/restartContainer/btnHome" to="." method="_on_menu_button_pressed"]
